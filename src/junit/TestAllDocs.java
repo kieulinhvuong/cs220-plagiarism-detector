@@ -18,11 +18,6 @@ class TestAllDocs {
     }
     
 	public static void main(String[] args) throws Exception {
-		//
-		// TODO you probably want to add more code or more tests
-		// This just gets things started
-		//
-		
 		
 		// how long does it take to create a detector?
 		long start = System.currentTimeMillis();
@@ -32,12 +27,7 @@ class TestAllDocs {
 		
 		// how long does it take to search for suspicious pairs?
 		start = System.currentTimeMillis();
-		// TODO: 500 is too big here! These are not long enough essays to
-		// have 500 ngrams in common!
-		// The average essay is less than 500 words long.
-		// What is a good number to put here? Try some different values to
-		// figure that out!
-		Collection<String> pairs = detector.getSuspiciousPairs(500);
+		Collection<String> pairs = detector.getSuspiciousPairs(50);
 		for (String pair : pairs) {
 			System.out.println(pair);
 		}
